@@ -2,9 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Ej9;
-
-import Ej1.*;
+package Ej10;
 
 /**
  *
@@ -14,13 +12,13 @@ public class Persona {
     private String nombre;
     private String apellido;
     private int anioNacimiento;
-    private Domicilio dom;
+    //private Domicilio dom;
 
-    public Persona(String nombre, String apellido, int anioNacimiento, Domicilio miCasa) {
+    public Persona(String nombre, String apellido) {
         this.nombre = nombre;
         this.apellido = apellido;
-        this.anioNacimiento = anioNacimiento;
-        dom = miCasa;
+        //this.anioNacimiento = anioNacimiento;
+        //dom = miCasa;
     }
     
     public void getNombreCompleto(){
@@ -63,7 +61,7 @@ public class Persona {
 
     @Override
     public String toString() {
-        return "nombre = " + nombre + ", apellido = " + apellido + ", nacimiento = " + anioNacimiento + ", " +dom;
+        return "nombre = " + nombre + ", apellido = " + apellido ; //+ "nacimiento = " + anioNacimiento 
     }
     
     
