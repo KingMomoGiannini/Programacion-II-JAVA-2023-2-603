@@ -22,7 +22,19 @@ public class TarjetaDeCredito {
         this.titular = titular;
         this.entidadFinanciera = entidadFinanciera;
     }
-
+    
+    public boolean tieneSaldoDisponible(double monto){
+        return saldo >= monto;
+    }
+    
+    public void descontar(double monto){ //Metodo para descontar monto del saldo;
+        saldo -= monto;
+    }
+    
+    public String nombreCompletoTitular(){
+        return titular.nombreCompleto();
+    }
+    
     @Override
     public String toString() {
         return "TarjetaDeCredito{" + "entidadBancaria=" + entidadBancaria + ", numero=" + numero + ", saldo=" + saldo + ", titular=" + titular + ", entidadFinanciera=" + entidadFinanciera + '}';

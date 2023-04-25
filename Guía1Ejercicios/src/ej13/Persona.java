@@ -23,10 +23,10 @@ public class Persona {
         this.mail = mail;
     }
 
-    /*@Override
+    @Override
     public String toString() {
         return "Persona{" + "DNI=" + DNI + ", nombre=" + nombre + ", apellido=" + apellido + ", telefono=" + telefono + ", mail=" + mail + '}';
-    }*/
+    }
     
     public String nombreCompleto(){
         return nombre + " " + apellido;
