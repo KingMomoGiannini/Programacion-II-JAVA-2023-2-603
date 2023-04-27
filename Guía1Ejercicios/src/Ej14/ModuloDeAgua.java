@@ -11,7 +11,15 @@ package Ej14;
 public class ModuloDeAgua {
     private double temperatura;
     private boolean mantenimiento;
-    private int puntosAgua;
+
+    public ModuloDeAgua(double temperatura, boolean mantenimiento) {
+        this.temperatura = temperatura;
+        this.mantenimiento = mantenimiento;
+    }
+    
+    public boolean aguaLista(){  //metodo que devuelve TRUE si el modulo de agua está listo.
+        return temperatura > 70 && mantenimiento;
+    }
     
     
 }

@@ -12,7 +12,4 @@ public enum TipoDeLeche {
     ESPUMOSA,
     NORMAL,
     LIQUIDA;
-    
-    
-    
 }

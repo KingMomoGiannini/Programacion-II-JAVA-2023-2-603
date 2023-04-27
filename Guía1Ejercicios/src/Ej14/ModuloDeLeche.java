@@ -13,16 +13,25 @@ public class ModuloDeLeche {
     private int puntosLeche;
     private TipoDeLeche textura;
 
-    public ModuloDeLeche(int medidorDeLiquido, int puntosLeche, TipoDeLeche textura) {
+    public ModuloDeLeche(int medidorDeLiquido, TipoDeLeche textura) {
         this.medidorDeLiquido = medidorDeLiquido;
-        this.puntosLeche = puntosLeche;
         this.textura = textura;
     }
     
+    public void restarPuntos (int puntosLeche){  //Si la leche alcanza restará los puntos al modulo.
+        if(puntosLeche > 0 && lecheSuficiente()){
+            this.medidorDeLiquido -= puntosLeche;
+        }
+    }
     
+    public void llenarModulo(int puntosLeche){ //Metodo para llenar o rellenar el modulo con mas puntos de leche.
+        if(puntosLeche > 0  && (puntosLeche + medidorDeLiquido) <=5 ){
+            this.medidorDeLiquido += puntosLeche;
+        }
+    }
     
-    public boolean lecheSuficiente(){
-        return puntosLeche < medidorDeLiquido; 
+    public boolean lecheSuficiente(){ //Metodo para verificar si hay leche suficiente en el modulo.
+        return puntosLeche <= medidorDeLiquido; 
     }
     
 }
