@@ -16,8 +16,18 @@ public class Principal {
     public static void main(String[] args) {
         ModuloDeAgua agua = new ModuloDeAgua(70,true);
         ModuloDeLeche leche = new ModuloDeLeche(0,TipoDeLeche.LIQUIDA);
-        MaquinaDeCafe cafetera = new MaquinaDeCafe("Teros",true);
+        MaquinaDeCafe cafetera = new MaquinaDeCafe("Teros",true,leche,agua);
         
+        leche.estadoModulo();//Vemos el estado inicial del modulo de leche.
+        leche.llenarModulo(); //Recargamos el modulo.
+        leche.estadoModulo();
+        cafetera.servirCafe(TipoDeCafe.LATTE); //Servimos cafe hasta agotar el contenido del modulo.
+        cafetera.servirCafe(TipoDeCafe.LAGRIMA);
+        leche.estadoModulo();
+        cafetera.servirCafe(TipoDeCafe.LATTE); // Al no recargarlo muestra mensaje de error.
+        cafetera.servirCafe(TipoDeCafe.EXPRESSO); // Pero si podemos servir Expresso, debido a que no utiliza modulo de leche.
+
+//        cafetera.servirCafe(TipoDeCafe.LATTE);
         
     }
     

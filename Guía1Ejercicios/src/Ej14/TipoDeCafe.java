@@ -17,6 +17,7 @@ public enum TipoDeCafe {
     private int puntosAgua;
     private int puntosLeche;
     private TipoDeLeche textura;
+    private TipoDeCafe cafe;
 
     private TipoDeCafe(int puntosAgua, int puntosLeche, TipoDeLeche text) {
         this.puntosAgua = puntosAgua;
@@ -27,5 +28,26 @@ public enum TipoDeCafe {
     private TipoDeCafe(int puntosAgua) { //Sobrecargamos el constructor, ya que no todos los tipos de café cuentan con atributos de leche.
         this.puntosAgua = puntosAgua;
     }
+
+    public int getPuntosLeche() {
+        
+        return puntosLeche;
+    }
+
+    public int getPuntosAgua() {
+        return puntosAgua;
+    }
+
+    public String getTextura() {
+        return "" + textura;
+    }
+    
+
+//    @Override
+//    public String toString() {
+//        return " {" + "puntosAgua=" + puntosAgua + ", puntosLeche=" + puntosLeche + ", textura=" + textura + '}';
+//    }
+    
+    
     
 }

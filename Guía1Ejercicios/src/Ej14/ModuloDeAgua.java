@@ -18,7 +18,7 @@ public class ModuloDeAgua {
     }
     
     public boolean aguaLista(){  //metodo que devuelve TRUE si el modulo de agua está listo.
-        return temperatura > 70 && mantenimiento;
+        return temperatura >= 70 && mantenimiento;
     }
     
     
