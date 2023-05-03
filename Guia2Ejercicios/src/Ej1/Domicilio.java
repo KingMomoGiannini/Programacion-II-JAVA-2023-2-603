@@ -17,21 +17,7 @@ public class Domicilio {
 
     public String getBarrio() {
         return barrio;
-    }
-
-    public void setCalle(String calle) {
-        this.calle = calle;
-    }
-
-    public void setNumero(int numero) {
-        this.numero = numero;
-    }
-
-    public void setBarrio(String barrio) {
-        this.barrio = barrio;
-    }
-    
-    
+    }    
     
     @Override
     public String toString() {

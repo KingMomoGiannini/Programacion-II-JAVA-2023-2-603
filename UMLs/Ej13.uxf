@@ -1,0 +1,42 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>110</x><y>60</y><w>300</w><h>130</h></coordinates><panel_attributes>Posnet
+--
+_+RECARGO_POR_CUOTA : double = 0.03;_
+_+MIN_CANT_CUOTAS : int = 1_
+_+MAX_CANT_CUOTAS : int = 6_
+--
++efectuarPago(TarjetaDeCredito, double, int): Ticket
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>550</x><y>110</y><w>210</w><h>110</h></coordinates><panel_attributes>Ticket
+--
+-nombreApellido: String 
+-montoTotal: double 
+-montoPorCuota: double
+--
++toString(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>120</x><y>290</y><w>400</w><h>130</h></coordinates><panel_attributes>TarjetaDeCredito
+--
+-entidadBancaria : String
+-numero : String
+-saldo : double
+
+--
++TarjetaDeCredito (String, String, double, Persona, EntidadFinanciera)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>170</x><y>510</y><w>210</w><h>130</h></coordinates><panel_attributes>Persona
+--
+-nombre: String
+-apellido: String
+-DNI: String
+-telefono: String
+-mail: String
+--
++nombreCompleto(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>650</x><y>310</y><w>210</w><h>80</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+EntidadFinanciera
+--
++BIRZA
++CASTERMARD</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>410</y><w>70</w><h>120</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+-titular
+</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>510</x><y>340</y><w>160</w><h>80</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+-entidadFinanciera
+
+
+</panel_attributes><additional_attributes>140;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>400</x><y>110</y><w>170</w><h>30</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>150;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>180</y><w>30</w><h>130</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;110;10;10</additional_attributes></element></diagram>
