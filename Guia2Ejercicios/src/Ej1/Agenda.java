@@ -43,9 +43,11 @@ public class Agenda {
             personas.add(persona);
             return true;
         }
-        else
+        else{
             System.out.println("La persona con DNI " + persona.getDNI() + " no se agrego a la agenda.\n");
+            System.out.println("DNI repetido.");
             return false;
+        }
     }
 //    
     public Persona removerPersona(String dni){
