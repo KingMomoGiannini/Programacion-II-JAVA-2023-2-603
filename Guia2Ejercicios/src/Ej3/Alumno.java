@@ -17,7 +17,7 @@ public class Alumno {
         evaluaciones = new ArrayList<>();
     }
     
-    public void calcularPromedio (){
+    public double calcularPromedio (){
         double sumatoriaNotas = 0;
         int i;
         for (i = 0; i < evaluaciones.size(); i++) {
@@ -25,7 +25,7 @@ public class Alumno {
                 sumatoriaNotas += evaluaciones.get(i).getNota();                
             }
         }
-        System.out.println(sumatoriaNotas/3);
+        return sumatoriaNotas/3;
     }
     
     public void agregarNotaEvaluaciones(Evaluacion eval, int notaEval){

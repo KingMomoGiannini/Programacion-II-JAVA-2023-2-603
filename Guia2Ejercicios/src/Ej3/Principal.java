@@ -74,9 +74,11 @@ public class Principal {
         System.out.println(c1+"\n");
         System.out.println(c2+"\n");
         
-        a.calcularPromedio();
-
-
+        System.out.println(a.calcularPromedio());
+        System.out.println(a5.calcularPromedio());
+        
+        System.out.println("\nAlumnos/as por encima del promedio en "
+        + c1.getCodigo() + " son:\n" + c1.buscarAlumnosPorEncimaDe(7));
     }
     
 }
