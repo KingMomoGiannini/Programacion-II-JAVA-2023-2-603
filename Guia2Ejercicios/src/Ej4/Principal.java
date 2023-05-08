@@ -62,6 +62,7 @@ public class Principal {
         
         m.borrarVehiculo("HAM916");
         
+        System.out.println("\nVehiculos concesionaria " +c.getNombre() );
         c.mostrarVehiculos();
         
         m.cambiarVehiculoDeConsecionaria("ERT980", c2);
