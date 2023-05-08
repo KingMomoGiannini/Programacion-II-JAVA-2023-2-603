@@ -64,6 +64,14 @@ public class Principal {
         
         c.mostrarVehiculos();
         
+        m.cambiarVehiculoDeConsecionaria("ERT980", c2);
+        
+        System.out.println("\nVehiculos concesionaria " +c.getNombre() );
+        c.mostrarVehiculos();
+        
+        System.out.println("\nVehiculos concesionaria "+ c2.getNombre());
+        c2.mostrarVehiculos();
+        
     }
     
 }

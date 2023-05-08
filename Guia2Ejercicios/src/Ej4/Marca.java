@@ -82,9 +82,20 @@ public class Marca {
 //        }
 //    } //v1 metodo eliminaba otros Vehiculos cuya patente no coincidia(Ademas de la que sí). 
     
-//    public void cambiarVehiculoDeConsecionaria (String patente,Concesionaria consecionaria){
-//    
-//    }
+    public void cambiarVehiculoDeConsecionaria (String patente,Concesionaria concesionariaDestino){
+            for (Concesionaria concesionaria : concesionarias) {
+                ArrayList<Vehiculo> vehiculos = concesionaria.getVehiculos();
+                for (int j = 0; j < vehiculos.size(); j++) {
+                    Vehiculo vehiculo = vehiculos.get(j);
+                    if (patente.equals(vehiculo.getPatente())) {
+                        concesionariaDestino.agregarVehiculo(vehiculo);
+                        concesionaria.removerVehiculo(j);
+                        return; //v3 Sale del método después de eliminar el primer vehículo que coincida con la patente indicada
+                    }
+                }
+        }
+        
+    }
     
 } 
     

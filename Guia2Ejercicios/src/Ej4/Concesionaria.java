@@ -67,7 +67,11 @@ public class Concesionaria {
 //        return retorno;
 //    }
     
-    public void removerVehiculo(int i){
+    public String getNombre(){
+        return nombre;
+    }
+
+    public void removerVehiculo(int i) {
         vehiculos.remove(i);
     }
     
