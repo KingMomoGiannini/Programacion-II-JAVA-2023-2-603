@@ -73,6 +73,9 @@ public class Principal {
         System.out.println("\nVehiculos concesionaria "+ c2.getNombre());
         c2.mostrarVehiculos();
         
+        System.out.println(m.obtenerConcesionariaMaxVeh()+"\n");// item D
+
+        
     }
     
 }
