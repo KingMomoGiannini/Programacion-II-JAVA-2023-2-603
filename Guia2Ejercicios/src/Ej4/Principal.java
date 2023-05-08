@@ -51,8 +51,8 @@ public class Principal {
         c2.agregarVehiculo(v8);
         c2.agregarVehiculo(v9);
         
-        c.mostrarVehiculos();
-        //c.mostrarVehiculos(TipoVehiculo.AUTO);// item B
+        //c.mostrarVehiculos();
+        c.mostrarVehiculos(TipoVehiculo.AUTO);// item B
         
         System.out.println("\nVehiculos que la marca ofrece: ");
         m.mostrarVehiculos(); // item C

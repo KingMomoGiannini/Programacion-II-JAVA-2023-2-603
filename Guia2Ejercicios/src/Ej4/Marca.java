@@ -46,23 +46,46 @@ public class Marca {
         return conMasVeh;
     }
     
-    public void borrarVehiculo (String patente){
-        for (int i = 0; i < concesionarias.size(); i++) {
-            for (int j = 0; j < concesionarias.get(i).getCantidadDeVehiculos(); j++) {
-                if (patente.equals(concesionarias.get(i).patenteVehiculo(patente))) {
-                    concesionarias.get(i).removerVehiculo(j); 
+    public void borrarVehiculo(String patente) {
+        for (Concesionaria concesionaria : concesionarias) {
+            ArrayList<Vehiculo> vehiculos = concesionaria.getVehiculos();
+            for (int j = 0; j < vehiculos.size(); j++) {
+                Vehiculo vehiculo = vehiculos.get(j);
+                if (patente.equals(vehiculo.getPatente())) {
+                    concesionaria.removerVehiculo(j);
+                    return; //v3 Sale del método después de eliminar el primer vehículo que coincida con la patente indicada
                 }
             }
         }
     }
+//    public void borrarVehiculo(String patente) {
+//        boolean vehiculoEncontrado = false; // Variable para indicar si se ha encontrado el vehículo
+
+//        for (int i = 0; i < concesionarias.size() && !vehiculoEncontrado; i++) {
+//            Concesionaria concesionaria = concesionarias.get(i);
+//            for (int j = 0; j < concesionaria.getCantidadDeVehiculos() && !vehiculoEncontrado; j++) {
+//                if (patente.equals(concesionaria.patenteVehiculo(patente))) {
+//                    concesionaria.removerVehiculo(j);
+//                    vehiculoEncontrado = true; // Actualizar la variable indicando que se ha encontrado el vehículo
+//                }
+//            }
+//        }v2 metodo eliminaba otro Vehiculo cuya patente no coincidia
+
     
-    public void cambiarVehiculoDeConsecionaria (String patente,Concesionaria consecionaria){
+//    public void borrarVehiculo (String patente){
+//        for (int i = 0; i < concesionarias.size(); i++) {
+//            for (int j = 0; j < concesionarias.get(i).getCantidadDeVehiculos(); j++) {
+//                if (patente.equals(concesionarias.get(i).patenteVehiculo(patente))) {
+//                    concesionarias.get(i).removerVehiculo(j); 
+//                }
+//            }
+//        }
+//    } //v1 metodo eliminaba otros Vehiculos cuya patente no coincidia(Ademas de la que sí). 
     
-    }
+//    public void cambiarVehiculoDeConsecionaria (String patente,Concesionaria consecionaria){
+//    
+//    }
     
-    public int vehiculosPorConcesionaria(Concesionaria concesionaria){
-        return concesionaria.getCantidadDeVehiculos();
-    }
+} 
     
-    
-}
+
