@@ -1,0 +1,8 @@
+A) Casa is a Inmueble
+B) Auto has a Motor
+C) Auto is a Vehiculo
+D) Persona has a Domicilio
+E) Celular has a Pantalla
+F) Servidor has a Computadora
+F) Naranja is a Color
+H) Java is a Lenguaje
