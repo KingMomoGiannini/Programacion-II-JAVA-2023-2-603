@@ -1,0 +1,14 @@
+A) TelefonoMovil tm <- new Dispositivo()
+B) Electrodomestico e <- new Licuadora()
+C) Publicacion p <- new Publicacion()
+D) Motocicleta m <- new Bicicleta()
+E) LocalComercial lc <- new Inmueble()
+
+
+a- Incorrecto.
+b- Correcto.
+c- Correcto.
+d- Incorrecto.
+e- Incorrecto.
+
+
