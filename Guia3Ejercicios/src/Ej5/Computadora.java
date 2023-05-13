@@ -25,27 +25,72 @@ public class Computadora {
         }
     }
     
-    public void cerrarTodos (){
-    
+    public void cerrarTodos (){//Ok, comprobado en main
+        for (Archivo archivo : a) { // Por cada archivo de la lista
+            if (archivo.isEstado()) {
+                archivo.setEstado(false);
+            }
+        }
     }
     
-    public int cantArchivosDeTexto(){
-    
-        return 0;
+    public void archivosAbiertos(){
+        int abiertos = 0;
+        for (Archivo archivo : a) {
+            if (archivo.isEstado()) {
+                abiertos++;
+            }
+        }
+        System.out.println("Archivos abiertos: " + abiertos);
     }
     
-    public void cifrarArchivos(){
-    
+    public int cantArchivosDeTexto(){//Ok, comprobado en main
+        int cantTexto = 0;
+        for (Archivo archivo : a) {
+            if (archivo instanceof Texto) {
+                cantTexto++;
+            }
+        }
+        return cantTexto;
     }
     
-    public int duracionPromedio(){
+    public void cifrarArchivos(){//Ok, comprobado en main
+        for (Archivo archivo : a) {
+            if (archivo instanceof Texto ) {
+                ((Texto) archivo).setCifrado(true);
+            }
+        }
+    }
     
-        return 0;
+    public void cifradoArchivos(){//Ok, comprobado en main
+        for (Archivo archivo : a) {
+            if (archivo instanceof Texto ) {
+                System.out.println(((Texto) archivo).isCifrado());
+            }
+        }
+    }
+    
+    public double duracionPromedio(){//Ok, comprobado en main
+        double durArchivos = 0;
+        int cantArchivos = 0;
+        for (Archivo archivo : a) {
+            if (archivo instanceof ArchivoMultimedia) {
+                cantArchivos ++;
+                durArchivos += ((ArchivoMultimedia) archivo).getDuracion();
+            }
+        }
+        return durArchivos/cantArchivos;
     }
     
     public ArrayList<Archivo> videosFullHD(){
-    
-        return null;
+        ArrayList<Archivo> fullHD = new ArrayList<>(); 
+        for (Archivo archivo : a) {
+            if (archivo instanceof Video) {
+                if(((Video) archivo).getResolucion().equals("1920x1080")){
+                    fullHD.add(archivo);
+                }
+            }
+        }
+        return fullHD;
     }
     
 }

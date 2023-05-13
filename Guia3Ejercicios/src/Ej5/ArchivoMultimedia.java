@@ -14,15 +14,21 @@ public class ArchivoMultimedia extends Archivo {
     private boolean reproduce;
 
     public ArchivoMultimedia(int duracion, boolean reproduce,String nombre, double peso, String ubicacion,boolean estado) {
-        super(nombre,peso,ubicacion);
+        super(nombre,peso,ubicacion,estado);
         this.duracion = duracion;
         this.reproduce = reproduce;
     }
-
-    
     
     public void reproducirPausar(boolean playPause){
-    
+        if (playPause) {
+            this.reproduce= !playPause;
+        }
     }
+
+    public int getDuracion() {
+        return duracion;
+    }
+    
+    
     
 }

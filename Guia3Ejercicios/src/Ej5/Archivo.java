@@ -15,11 +15,21 @@ public class Archivo {
     private String ubicacion;
     private boolean estado;
 
-    public Archivo(String nombre, double peso, String ubicacion) {
+    public Archivo(String nombre, double peso, String ubicacion, boolean estado) {
         this.nombre = nombre;
         this.peso = peso;
         this.ubicacion = ubicacion;
+        this.estado = estado;
     }
+
+    public boolean isEstado() {
+        return estado;
+    }
+
+    public void setEstado(boolean estado) {
+        this.estado = estado;
+    }
+    
     
     
     

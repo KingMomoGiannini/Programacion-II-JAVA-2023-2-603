@@ -9,6 +9,7 @@ package Ej5;
  * @author giann
  */
 public class Video extends ArchivoMultimedia {
+    
     private String resolucion;
     private FormatoVideo formato;
     
@@ -17,8 +18,15 @@ public class Video extends ArchivoMultimedia {
         this.resolucion = resolucion;
         this.formato = formato;
     }
-    
-    
-    
+
+    public String getResolucion() {
+        return resolucion;
+    }
+
+    @Override
+    public String toString() {
+        
+        return "Video: resolucion: = " + resolucion + "\tFormato: " + formato;
+    }
     
 }
