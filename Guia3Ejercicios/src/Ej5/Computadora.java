@@ -81,7 +81,7 @@ public class Computadora {
         return durArchivos/cantArchivos;
     }
     
-    public ArrayList<Archivo> videosFullHD(){
+    public ArrayList<Archivo> videosFullHD(){//Ok, comprobado en main
         ArrayList<Archivo> fullHD = new ArrayList<>(); 
         for (Archivo archivo : a) {
             if (archivo instanceof Video) {

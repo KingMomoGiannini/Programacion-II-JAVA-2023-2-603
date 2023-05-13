@@ -57,8 +57,9 @@ public class Principal {
         c.archivosAbiertos();
         c.cerrarTodos();// ok
         c.archivosAbiertos();
+        System.out.println("");
         
-        System.out.println(c.videosFullHD());
+        System.out.println(c.videosFullHD());//ok
         
     }
     
