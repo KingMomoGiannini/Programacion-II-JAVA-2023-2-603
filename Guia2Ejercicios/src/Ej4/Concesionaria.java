@@ -33,9 +33,9 @@ public class Concesionaria {
         }
     }
     
-    public ArrayList<Vehiculo> getVehiculos() {//Metodo para enviar ArrayList de vehiculos en la concesionaria.
-        return vehiculos;
-    }
+//    public ArrayList<Vehiculo> getVehiculos() {//Metodo para enviar ArrayList de vehiculos en la concesionaria.
+//        return vehiculos;
+//    }
     
     public void mostrarVehiculos(){
         for (int i = 0; i < vehiculos.size(); i++) {
@@ -51,9 +51,34 @@ public class Concesionaria {
         for (int i = 0; i < vehiculos.size(); i++) {
             if (patente.equals(vehiculos.get(i).getPatente())) {
                 return vehiculos.get(i).getPatente();
+                
             }
         }
         return null; // Devuelve null si no se encuentra la patente en los vehículos de la concesionaria
+    }
+    
+    public Vehiculo buscarVehiculo(String patente){
+        Vehiculo v = null;
+        int i = 0;
+        while(i<vehiculos.size() && v == null){
+            if (vehiculos.get(i).getPatente().equals(patente)){
+                v = vehiculos.get(i);
+            }
+            i++;
+        }
+        return v;
+    }
+    
+    public void eliminarVehiculo(Vehiculo v){
+        
+        int i = 0;
+        while (i < vehiculos.size()){
+            if (vehiculos.get(i).equals(v)) {
+                vehiculos.remove(i);
+                i = vehiculos.size();
+            }
+            i++;
+        }
     }
 
     
