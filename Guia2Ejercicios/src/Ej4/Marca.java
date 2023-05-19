@@ -53,7 +53,7 @@ public class Marca {
                 Vehiculo vehiculo = vehiculos.get(j);
                 if (patente.equals(vehiculo.getPatente())) {
                     concesionaria.removerVehiculo(j);
-                    return; //v3 Sale del método después de eliminar el primer vehículo que coincida con la patente indicada
+                    j = vehiculos.size(); //v3 Sale del método después de eliminar el primer vehículo que coincida con la patente indicada
                 }
             }
         }
