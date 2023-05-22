@@ -23,16 +23,16 @@ public class PSalarioFijo extends Personal {
     public double salarioFinal(){
         double salario = sueldoBasico;
         if (aniosActivo() >= 0 && aniosActivo() < 2) {
-            this.adicional = 0;
+            adicional = 0;
         }
         else if(aniosActivo() >= 2 && aniosActivo() <= 5){
-            this.adicional = sueldoBasico*0.05;
+            adicional = sueldoBasico*0.05;
         }
         else if(aniosActivo() >= 6 && aniosActivo() <= 10){
-            this.adicional = sueldoBasico*0.1;
+            adicional = sueldoBasico*0.1;
         }
         else if(aniosActivo() > 10 ){
-            this.adicional = sueldoBasico*0.15;
+            adicional = sueldoBasico*0.15;
         }
         salario += adicional;
         return salario;
