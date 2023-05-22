@@ -10,7 +10,7 @@ package Ej8;
  */
 public class PAComision extends Personal {
     
-    private int SALARIO_MINIMO = 20000;
+    private static final int SALARIO_MINIMO = 20000;
     private int clientesCaptados;
     private double montoPorCliente;
 
