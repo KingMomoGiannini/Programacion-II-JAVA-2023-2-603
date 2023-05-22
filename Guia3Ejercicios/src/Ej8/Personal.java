@@ -34,8 +34,21 @@ public abstract class Personal {
         return anioIngreso;
     }
     
-    
+    public int cantidadDeClientes(Personal emp){
+        int cantidad = 0;
+        if (emp instanceof PAComision) {
+            cantidad = ((PAComision) emp).getClientesCaptados();
+        }
+        return cantidad;
+    }
     
     public abstract void mostrarSalarios();
+
+    @Override
+    public String toString() {
+        return "DNI: " + DNI + " , Nombre completo: " + nombre + " " + apellido ;
+    }
+    
+    
     
 }

@@ -1,0 +1,41 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>330</x><y>210</y><w>210</w><h>200</h></coordinates><panel_attributes>/Personal/
+--
+-DNI:String
+-nombre:String
+-apellido:String
+-anioIngreso:int
+--
++Personal(String,String,String,int)
++getNombre( ): String
++getApellido( ): String
++getAnioIngreso( ): int
++cantidadDeClientes(Personal): int
+/+mostrarSalarios( ): void/
++toString( ): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>200</x><y>480</y><w>210</w><h>140</h></coordinates><panel_attributes>PAComision
+--
+_-SALARIO_MINIMO = 20000_
+-clientesCaptados: int
+-montoPorCliente: double
+--
++PAComision(int,double)
++getClientesCaptados( ): int
++salarioFinal( ): double
+*+mostrarSalarios( ): void*</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>510</x><y>400</y><w>90</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;70;80</additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>400</y><w>90</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>70;10;10;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>480</x><y>480</y><w>210</w><h>120</h></coordinates><panel_attributes>PSalarioFijo
+--
+-sueldoBasico:double
+-adicional:double
+--
++PSalarioFijo( )
++salarioFinal( ):double;
+*+mostrarSalarios( ): void*
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>330</x><y>40</y><w>210</w><h>110</h></coordinates><panel_attributes>Empresa
+--
+--
++Empresa( )
++agregarEmpleados(Personal) : void
++empleadoConMasClientes( ): Personal
++mostrarSalarios( ): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>430</x><y>140</y><w>90</w><h>90</h></coordinates><panel_attributes>lt=&lt;-
+m1=*
+empleados
+
+</panel_attributes><additional_attributes>10;70;10;10</additional_attributes></element></diagram>

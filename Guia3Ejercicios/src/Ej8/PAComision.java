@@ -14,17 +14,24 @@ public class PAComision extends Personal {
     private int clientesCaptados;
     private double montoPorCliente;
 
-    public PAComision(int clientesCaptados, String DNI, String nombre, String apellido, int anioIngreso) {
+    public PAComision(int clientesCaptados, double montoPorCliente, String DNI, String nombre, String apellido, int anioIngreso) {
         super(DNI, nombre, apellido, anioIngreso);
         this.clientesCaptados = clientesCaptados;
+        this.montoPorCliente = montoPorCliente;
+    }
+
+    public int getClientesCaptados() {
+        return clientesCaptados;
     }
     
     public double salarioFinal(){
         double salario = SALARIO_MINIMO;
-        
+        if(clientesCaptados * montoPorCliente > SALARIO_MINIMO){
+            salario = clientesCaptados * montoPorCliente;
+        }
         return salario;
     }
-
+    
     @Override
     public void mostrarSalarios() {
         System.out.println("Nombre completo: " + super.getNombre() + " " + super.getApellido() + " - Salario: $" +salarioFinal() );

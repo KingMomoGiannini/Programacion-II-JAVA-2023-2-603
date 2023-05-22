@@ -4,6 +4,8 @@
  */
 package Ej8;
 
+import java.util.Calendar;
+
 /**
  *
  * @author giann
@@ -20,8 +22,28 @@ public class PSalarioFijo extends Personal {
     
     public double salarioFinal(){
         double salario = sueldoBasico;
-        
+        if (aniosActivo() >= 0 && aniosActivo() < 2) {
+            this.adicional = 0;
+        }
+        else if(aniosActivo() >= 2 && aniosActivo() <= 5){
+            this.adicional = sueldoBasico*0.05;
+        }
+        else if(aniosActivo() >= 6 && aniosActivo() <= 10){
+            this.adicional = sueldoBasico*0.1;
+        }
+        else if(aniosActivo() > 10 ){
+            this.adicional = sueldoBasico*0.15;
+        }
+        salario += adicional;
         return salario;
+    }
+    
+    public int aniosActivo(){
+        int anios = 0;
+        Calendar cal = Calendar.getInstance();
+        int anioActual = cal.get(Calendar.YEAR);
+        anios = anioActual - super.getAnioIngreso();
+        return anios;
     }
     
     @Override
