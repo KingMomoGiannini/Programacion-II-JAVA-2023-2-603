@@ -1,0 +1,69 @@
+<diagram program="umletino" version="15.1"><zoom_level>8</zoom_level><element><id>UMLClass</id><coordinates><x>240</x><y>88</y><w>168</w><h>88</h></coordinates><panel_attributes>Comercio
+--
+--
++Comercio( )
++factura(Facturable): void
++montoTotalFacturado( ): double
++servicioSimple(Facturable):boolean
++cantServiciosSimples( ): int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>240</x><y>248</y><w>168</w><h>72</h></coordinates><panel_attributes>/Facturable/
+--
+--
++Facturable(Matematica)
++getCalculo( ): Matematica
+/+montoDeFacturacion( ): double/
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>264</y><w>168</w><h>112</h></coordinates><panel_attributes>Insumo
+--
+-nombre: String
+-porcGanancia: double
+-precioLista: double
+--
++Insumo( )
++costoDelInsumo( ): double
++IVADelInsumo( ): double
+/*+montoDeFacturacion( ): double*/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>472</x><y>280</y><w>168</w><h>72</h></coordinates><panel_attributes>/Servicio/
+--
+-cantHoras: int
+--
++getCantHoras( ): int
+*+getCalculo( ): Matematica*
+/*+montoDeFacturacion( ): double*/
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>392</x><y>456</y><w>168</w><h>64</h></coordinates><panel_attributes>ServicioArmado
+--
+_-VALOR_HORA : double = 250_
+--
++ServicioArmado( )
+*+montoDeFacturacion( ): double*</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>576</x><y>456</y><w>168</w><h>128</h></coordinates><panel_attributes>ServicioReparacion
+--
+_-VALOR_HORA : double = 180_
+_-DIFICULTAD_MIN : int = 1_
+_-DIFICULTAD_MAX : int_= 5_
+-dificultad: int
+--
++ServicioReparacion(int)
++getDificultad( ):int
++reparacionSencilla( ): boolean
+*+montoDeFacturacion( ): double*
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>464</x><y>344</y><w>40</w><h>128</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>30;10;10;140</additional_attributes></element><element><id>Relation</id><coordinates><x>616</x><y>344</y><w>64</w><h>128</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;60;140</additional_attributes></element><element><id>Relation</id><coordinates><x>312</x><y>168</y><w>80</w><h>96</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..n
+-operaciones
+
+</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>432</y><w>168</w><h>80</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+tipoInsumo
+--
++PERIFERICO
++HARDWARE
++LIMPIEZA
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>80</x><y>368</y><w>40</w><h>80</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+-tipo
+</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>160</x><y>288</y><w>96</w><h>24</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>100;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>400</x><y>288</y><w>88</w><h>24</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;90;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>240</x><y>376</y><w>168</w><h>72</h></coordinates><panel_attributes>Matematica
+--
+--
+_+sumarPorcentaje(double,double): double_
++IVA(double): double
++costoServicio(double): double
++costoInsumo(double,double)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>312</x><y>312</y><w>56</w><h>80</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+
+-calculo</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element></diagram>
