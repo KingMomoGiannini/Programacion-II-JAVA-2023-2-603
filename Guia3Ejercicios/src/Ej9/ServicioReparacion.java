@@ -6,9 +6,9 @@ package Ej9;
 */
 public class ServicioReparacion extends Servicio {
 
-    private static final double VALOR_HORA = 180;
-    private static final int DIFICULTAD_MIN = 1;
-    private static final int DIFICULTAD_MAX = 5;
+    private static final double VALOR_HORA = 180;//Se repite en ambos tipos de servicio, con valores constantes diferentes
+    private static final int DIFICULTAD_MIN = 1;//No se usan, ni DIFICULTAD MIN ni DIFICULTAD MAX
+    private static final int DIFICULTAD_MAX = 5;//pero las dejo para refactorear a futuro
     private int dificultad;
 
     public ServicioReparacion(int dificultad, int cantHoras, Matematica calculo) {
