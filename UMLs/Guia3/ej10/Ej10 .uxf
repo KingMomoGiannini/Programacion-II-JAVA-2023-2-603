@@ -1,0 +1,78 @@
+<diagram program="umletino" version="15.1"><zoom_level>9</zoom_level><element><id>UMLClass</id><coordinates><x>396</x><y>99</y><w>207</w><h>72</h></coordinates><panel_attributes>Sophie
+--
+--
++Sophie()
++generarInforme(Programa):Informe</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>396</x><y>216</y><w>297</w><h>225</h></coordinates><panel_attributes>Programa
+--
+-id: String
+-nombre: String
+-nombreResponsable: String
+-flag: boolean
+--
++Programa(String,String,String,boolean)
++getId(): String
++agregarFuentes(Fuente,Fuente): void
+*+indiceCalidad( ):double*
++promedioIndiceFuentes(): double
++getIndiceFuenteMarcado():double
++getIndiceFuenteProgram(): double
++mostrarDetalleDeMetodo(String): void
++listadoFuentesMayoresAlPromedio(): void
+*+toString*
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>396</x><y>486</y><w>189</w><h>90</h></coordinates><panel_attributes>/Fuente/
+--
+-nombre: String
+-ubicacion: String
+--
++Fuente(String,String)
+/*+indiceCalidad( ):double*/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>387</x><y>621</y><w>207</w><h>99</h></coordinates><panel_attributes>LenguajeDeProgramacion
+--
+--
+LenguajeDeProgramacion(String,String)
++agregarMetodos(Metodo): void
++getMetodo(String): Metodo
++cantMetodos(): int
+*+indiceCalidad( ):double*</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>657</x><y>486</y><w>189</w><h>72</h></coordinates><panel_attributes>LenguajeDeMarcado
+--
+-tamanioArchivo: double
+-
++LenguajeDeMarcado(double)
+*+indiceCalidad( ):double*</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>396</x><y>792</y><w>189</w><h>117</h></coordinates><panel_attributes>Metodo
+--
+-nombre: String
+-cantParametros: int
+-cantInstrucciones: int
+-cantRamificaciones: int
+--
++Metodo(String,int,int,int)
++getNombre(): String
+*+indiceCalidad( ):double*
+*+toString(): String*</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>486</x><y>162</y><w>27</w><h>72</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;60;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>576</x><y>522</y><w>99</w><h>27</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;90;10</additional_attributes></element><element><id>Relation</id><coordinates><x>486</x><y>567</y><w>27</w><h>72</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>486</x><y>432</y><w>72</w><h>72</h></coordinates><panel_attributes>lt=&lt;-
+m1=*
+-fuentes
+
+</panel_attributes><additional_attributes>10;60;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>486</x><y>711</y><w>72</w><h>99</h></coordinates><panel_attributes>lt=&lt;-
+m1=*
+-metodos
+</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>657</x><y>630</y><w>189</w><h>72</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+/Calificables/
+--
+--
+/+indiceCalidad( ):double/</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>729</x><y>549</y><w>27</w><h>99</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>585</x><y>657</y><w>90</w><h>27</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>80;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>576</x><y>693</y><w>180</w><h>180</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>180;10;180;180;10;180</additional_attributes></element><element><id>Relation</id><coordinates><x>684</x><y>297</y><w>225</w><h>387</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>180;410;230;410;230;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>666</x><y>117</y><w>207</w><h>63</h></coordinates><panel_attributes>Informe
+--
+--
++Informe(double,double,double,String)
++toString(): String
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>594</x><y>126</y><w>90</w><h>27</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>80;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>99</y><w>306</w><h>108</h></coordinates><panel_attributes>CoCode
+--
+--
++Cocode(Sophie)
++listarProgramas(Programa): void
++umbralValido(double): boolean
++analizarPorOrdenDeLlegada(): void
++programasPorDebajoDe(double): ArrayList&lt;Programa&gt;</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>297</x><y>126</y><w>117</w><h>45</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+-sophie</panel_attributes><additional_attributes>110;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>189</x><y>198</y><w>225</w><h>162</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..n</panel_attributes><additional_attributes>230;150;10;150;10;10</additional_attributes></element></diagram>
