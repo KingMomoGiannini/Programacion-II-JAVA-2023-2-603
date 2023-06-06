@@ -1,6 +1,5 @@
 package Ej10;
 
-import java.util.ArrayList;
 
 /**
 * Código generado por la app UXFtoJava by Charly Cimino
@@ -22,9 +21,4 @@ public class Sophie {
             System.out.println(inf);
         }
     }
-    
-    public ArrayList<Programa> recibirProgramas(ArrayList<Programa> prog){
-        return prog;
-    }
-    
 }
