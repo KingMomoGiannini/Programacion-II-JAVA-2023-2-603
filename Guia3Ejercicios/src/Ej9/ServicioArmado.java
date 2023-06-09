@@ -8,15 +8,13 @@ public class ServicioArmado extends Servicio {
 
     private static final double VALOR_HORA = 250;
 
-    public ServicioArmado(int cantHoras, Matematica calculo) {
-        super(cantHoras, calculo);
+    public ServicioArmado(int cantHoras) {
+        super(cantHoras);
     }
-    
+
     @Override
-    public double montoDeFacturacion(){
-        double costoTotal = VALOR_HORA * super.getCantHoras()   ;
-        costoTotal += super.getCalculo().IVA(costoTotal)/2;
-        return costoTotal;
+    public double getVALOR_HORA() {
+        return VALOR_HORA;
     }
     
 }

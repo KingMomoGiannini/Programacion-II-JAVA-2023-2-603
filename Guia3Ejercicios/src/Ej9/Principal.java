@@ -10,19 +10,17 @@ public class Principal {
         
         Comercio com = new Comercio();
         
-        Matematica m = new Matematica();
+        Facturable in = new Insumo("teclado mecanico",20,1000,tipoInsumo.PERIFERICO);
+        Facturable in1 = new Insumo("mouse",20,800,tipoInsumo.PERIFERICO);
+        Facturable in2 = new Insumo("mouse gamer",20,1000,tipoInsumo.PERIFERICO);
+        Facturable in3 = new Insumo("FuerzaG ReTX 2060",20,12000,tipoInsumo.HARDWARE);
+        Facturable in4 = new Insumo("SSD 240gb",20,2000,tipoInsumo.HARDWARE);
         
-        Facturable in = new Insumo("teclado mecanico",20,1000,tipoInsumo.PERIFERICO,m);
-        Facturable in1 = new Insumo("mouse",20,800,tipoInsumo.PERIFERICO,m);
-        Facturable in2 = new Insumo("mouse gamer",20,1000,tipoInsumo.PERIFERICO,m);
-        Facturable in3 = new Insumo("FuerzaG ReTX 2060",20,12000,tipoInsumo.HARDWARE,m);
-        Facturable in4 = new Insumo("SSD 240gb",20,2000,tipoInsumo.HARDWARE,m);
-        
-        Facturable ser = new ServicioArmado (3,m);
-        Facturable ser1 = new ServicioArmado (3,m);
-        Facturable ser2 = new ServicioArmado (3,m);
-        Facturable ser3 = new ServicioReparacion(5,3,m);
-        Facturable ser4 = new ServicioReparacion(1,3,m);
+        Facturable ser = new ServicioArmado (3);
+        Facturable ser1 = new ServicioArmado (3);
+        Facturable ser2 = new ServicioArmado (3);
+        Facturable ser3 = new ServicioReparacion(5,3);
+        Facturable ser4 = new ServicioReparacion(1,3);
         
         com.factura(ser);
         com.factura(ser1);

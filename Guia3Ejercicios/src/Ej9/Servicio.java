@@ -4,27 +4,25 @@ package Ej9;
 * Código generado por la app UXFtoJava by Charly Cimino
 * @see https://github.com/CharlyCimino/uxf-to-java
 */
-public abstract class Servicio extends Facturable {
+public abstract class Servicio implements Facturable {
 
     private int cantHoras;
 
-    public Servicio(int cantHoras, Matematica calculo) {
-        super(calculo);
+    public Servicio(int cantHoras) {
         this.cantHoras = cantHoras;
     }
     
-    @Override
-    public Matematica getCalculo() {
-        return super.getCalculo();
+    public abstract double getVALOR_HORA();
+    
+    public double getPrecio(){
+        
+        return cantHoras * getVALOR_HORA();
     }
-
-    public int getCantHoras() {
-        return cantHoras;
-    }
-
     
     @Override
-    public abstract double montoDeFacturacion();
+    public double montoDeFacturacion(){
+        return Matematica.sumarPorcentaje(getPrecio(),IVA/2);
+    }
 
 
 }

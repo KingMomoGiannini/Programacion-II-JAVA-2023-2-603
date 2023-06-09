@@ -8,18 +8,10 @@ package Ej9;
  *
  * @author giann
  */
-public abstract class Facturable {
+public interface Facturable {
+
+    public static final double IVA = 21;
     
-    private Matematica calculo;
-
-    public Facturable(Matematica calculo) {
-        this.calculo = calculo;
-    }
-
-    public Matematica getCalculo() {
-        return calculo;
-    }
-
     public abstract double montoDeFacturacion();
-
+   
 }
