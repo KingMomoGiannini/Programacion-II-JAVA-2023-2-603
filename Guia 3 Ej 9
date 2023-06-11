@@ -1,0 +1,4 @@
+Guia 3 Ej 9
+Refactorear:
+- Facturable ---> Mejor si fuera Interface. Incorporar IVA.
+- Matematica ---> Solo se usa el metodo "static". 
