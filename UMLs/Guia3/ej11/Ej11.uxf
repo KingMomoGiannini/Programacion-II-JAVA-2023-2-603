@@ -1,0 +1,50 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text></help_text><element><id>UMLClass</id><coordinates><x>0</x><y>340</y><w>230</w><h>50</h></coordinates><panel_attributes>UProp
+--
+--
++listarInmobiliarias(Inmobiliaria): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>330</x><y>300</y><w>210</w><h>110</h></coordinates><panel_attributes>Inmobiliaria
+--
+-porcComisionVenta: double
+--
++Inmobiliaria(String,String,double)
++agregarInmueble(Inmueble): void
++agregarCliente(Persona): void
++recepcionMensaje(String):String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>330</x><y>480</y><w>240</w><h>160</h></coordinates><panel_attributes>Inmueble
+--
+-domicilio: String
+-superficie: double
+-cantAmbientes: int
+-precio: double
+--
++Inmueble(String,double,int,double)
++listarInteresados(Interesado): void
++setPrecio(double): double
++toString(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>670</x><y>180</y><w>210</w><h>100</h></coordinates><panel_attributes>Persona
+--
+-apellido: String
+-telefono: String
+--
++Persona(String,String,String,String)
++recepcionMensaje(String):String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>530</x><y>360</y><w>160</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>140;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>670</x><y>340</y><w>210</w><h>70</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+/Interesado/
+--
+--
+/+recepcionMensaje(String):String/
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>420</x><y>400</y><w>90</w><h>100</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..n
+-inmuebles
+
+</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>760</x><y>270</y><w>30</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;70;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>560</x><y>400</y><w>260</w><h>170</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..n
+-interesados                        
+</panel_attributes><additional_attributes>210;10;210;140;10;140</additional_attributes></element><element><id>UMLClass</id><coordinates><x>330</x><y>120</y><w>210</w><h>80</h></coordinates><panel_attributes>/Cliente/
+--
+#nombre: String
+#dirEmail: String
+--
++Cliente(String,String)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>510</x><y>210</y><w>180</w><h>110</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..n
+-clientes</panel_attributes><additional_attributes>160;20;10;20;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>420</x><y>190</y><w>30</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>530</x><y>140</y><w>260</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;240;10;240;40</additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>340</y><w>130</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..n
+-inmobiliarias
+</panel_attributes><additional_attributes>110;20;10;20</additional_attributes></element></diagram>
