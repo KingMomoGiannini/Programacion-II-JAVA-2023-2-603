@@ -27,10 +27,6 @@ public class Inmueble {
             interesados.add(interesado);
         }
     }
-
-    public String getDomicilio() {
-        return domicilio;
-    }
     
     public void setPrecio(double precio) {
         double montoAnterior = this.precio;
