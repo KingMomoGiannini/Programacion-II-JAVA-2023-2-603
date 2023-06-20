@@ -76,10 +76,20 @@ public class Principal {
         in5.listarInteresados(p6);
         in5.listarInteresados(p7);
         
+        uprop.listarInmobiliarias(i);
+        uprop.listarInmobiliarias(i1);
+        uprop.listarInmobiliarias(i2);
+        uprop.listarInmobiliarias(i3);
+        
         //Probamos setPrecio() en un inmueble.
         
-        in2.setPrecio(120000);
+        //in2.setPrecio(120000);
         
+        //Probamos setPrecio() dentro de otro metodo de la clase UProp en un inmueble.
+        uprop.cambiarPrecioPropiedad(in2, 120000);
+    }
+
+    public Principal() {
     }
                
     

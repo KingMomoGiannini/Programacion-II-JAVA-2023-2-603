@@ -4,13 +4,16 @@ package Ej11;
 * Código generado por la app UXFtoJava by Charly Cimino
 * @see https://github.com/CharlyCimino/uxf-to-java
 */
-public class Persona extends Cliente implements Interesado {
+public class Persona implements Interesado {
 
-    public String apellido;
-    public String telefono;
+    private String nombre;
+    private String dirEmail;
+    private String apellido;
+    private String telefono;
 
     public Persona(String telefono, String nombre, String apellido, String dirEmail) {
-        super(nombre, dirEmail);
+        this.nombre = nombre;
+        this.dirEmail = dirEmail;
         this.apellido = apellido;
         this.telefono = telefono;
     }
