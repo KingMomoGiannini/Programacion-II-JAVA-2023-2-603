@@ -1,0 +1,81 @@
+<diagram program="umletino" version="15.1"><zoom_level>9</zoom_level><element><id>UMLClass</id><coordinates><x>427</x><y>190</y><w>189</w><h>72</h></coordinates><panel_attributes>/Examen/
+--
+- fecha: String
+--
+/+ aprueba(): boolean/
+/+ infoVehiculo(): Vehiculo/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>427</x><y>46</y><w>189</w><h>90</h></coordinates><panel_attributes>Persona
+--
+- DNI: String
+- nombre: String
+- apellido: String
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>436</x><y>541</y><w>189</w><h>99</h></coordinates><panel_attributes>Circuito
+--
+- tiempo: int
+- falta: int
+--
++ getFaltas(): int
++ getTiempo(): int
++ aprueba(): boolean
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>697</x><y>154</y><w>189</w><h>72</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+/Evaluable/
+--
+--
+/+ aprueba(): boolean/
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>157</x><y>307</y><w>189</w><h>72</h></coordinates><panel_attributes>ExamenDeAuto
+--
+
+--
++ aprueba(): boolean
++ infoVehiculo(): Vehiculo</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>688</x><y>307</y><w>189</w><h>72</h></coordinates><panel_attributes>ExamenDeMoto
+--
+
+--
++ aprueba(): boolean
++ infoVehiculo(): Vehiculo</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>256</x><y>235</y><w>189</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>190;10;10;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>607</x><y>235</y><w>207</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;210;10;210;80</additional_attributes></element><element><id>Relation</id><coordinates><x>607</x><y>190</y><w>108</w><h>27</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>100;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>517</x><y>181</y><w>432</w><h>513</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>410;10;460;10;460;550;10;550;10;510</additional_attributes></element><element><id>Relation</id><coordinates><x>517</x><y>127</y><w>72</w><h>81</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+- persona</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>UMLClass</id><coordinates><x>283</x><y>451</y><w>108</w><h>54</h></coordinates><panel_attributes>Moto
+--
+- espejos: boolean
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>670</x><y>451</y><w>108</w><h>54</h></coordinates><panel_attributes>Auto
+--
+- cantPuertas: int
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>562</x><y>325</y><w>144</w><h>117</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+-infoMoto
+
+</panel_attributes><additional_attributes>10;110;10;20;140;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>652</x><y>37</y><w>234</w><h>72</h></coordinates><panel_attributes>Sede
+--
+--
++ obtenerPorcentajeReprobados(): double
++ promedioTiempo(): double
++ obtenerInforme(): String
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>787</x><y>100</y><w>90</w><h>72</h></coordinates><panel_attributes>lt=&lt;-
+m1=*
+- evaluables
+
+</panel_attributes><additional_attributes>10;60;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>940</x><y>37</y><w>207</w><h>63</h></coordinates><panel_attributes>Informe
+--
+- porcentajeReprobados: double
+- promedioTiempoAprobados: double
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>877</x><y>64</y><w>81</w><h>27</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>70;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>616</x><y>370</y><w>270</w><h>252</h></coordinates><panel_attributes>lt=&lt;-
+m1=*
+- circuitos
+</panel_attributes><additional_attributes>10;250;230;250;230;10</additional_attributes></element><element><id>Relation</id><coordinates><x>337</x><y>325</y><w>189</w><h>117</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+-infoAuto
+
+</panel_attributes><additional_attributes>180;110;180;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>193</x><y>370</y><w>261</w><h>252</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+- circuito
+</panel_attributes><additional_attributes>270;250;20;250;20;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>472</x><y>424</y><w>126</w><h>99</h></coordinates><panel_attributes>/Vehiculo/
+--
+- patente: String
+- marca: String
+- cilindrada: int
+--
++getCilindrada(): int
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>382</x><y>478</y><w>108</w><h>27</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>100;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>589</x><y>478</y><w>99</w><h>27</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;90;10</additional_attributes></element></diagram>
