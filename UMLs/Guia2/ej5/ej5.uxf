@@ -1,0 +1,48 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>130</x><y>60</y><w>350</w><h>110</h></coordinates><panel_attributes>Hotel
+--
+- nombre: String
+- direccion: String
+--
++Hotel(String,String)
++obtenerHabitacionesDisponibles():ArrayList&lt;Habitacion&gt;
++realizarCheckout(int): double
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>140</x><y>230</y><w>260</w><h>200</h></coordinates><panel_attributes>Habitacion
+--
+- numero: int
+- precioPorDia: double
+- ocupada: boolean
+- nomCliente: String
+- cantDias: int
+--
++Habitacion(int, double)
++Habitacion(int, double, boolean, String, int)
++getNumero(): int
++isOcupada(): boolean
++calcularTotal(): double
++toString(): String
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>290</x><y>160</y><w>110</w><h>90</h></coordinates><panel_attributes>lt=&lt;-
+m1=*
+- habitaciones
+</panel_attributes><additional_attributes>10;70;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>490</x><y>260</y><w>210</w><h>100</h></coordinates><panel_attributes>Adicional
+--
+- precio: double
+- fechaPrestacion: String
+--
++Adicional(double, String, tipo)
++getPrecio(): double
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>490</x><y>420</y><w>210</w><h>100</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+TipoPrestacion
+--
++DESAYUNO
++ROOMSERVICE
++TRASLADO
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>580</x><y>350</y><w>60</w><h>90</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+- tipo
+
+</panel_attributes><additional_attributes>10;70;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>390</x><y>300</y><w>120</w><h>60</h></coordinates><panel_attributes>lt=&lt;-
+m1=*
+- adicionales
+
+</panel_attributes><additional_attributes>100;20;10;20</additional_attributes></element></diagram>
