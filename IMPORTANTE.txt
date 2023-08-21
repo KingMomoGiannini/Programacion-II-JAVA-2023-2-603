@@ -1,0 +1,2 @@
+- Antes de continuar trabajando con proyectos en git, realizar un "git pull".
+- git fetch <--- actualiza el historial de git (sincroniza los repositorios remoto y local).
