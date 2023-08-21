@@ -1,0 +1,1 @@
+Agregamos el uso de una hoja de estilo en formato CSS.

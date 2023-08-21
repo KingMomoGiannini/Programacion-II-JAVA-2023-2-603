@@ -1,0 +1,14 @@
+body {
+    background-color: black;
+  }
+  
+  h1.prof{
+    text-align:center;
+    color:yellow;
+  }
+  h2.color{
+    color: yellow;
+  }
+  p.color{
+    color:yellow;
+  }
